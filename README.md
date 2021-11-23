@@ -4,11 +4,21 @@ This is a working snapshot for opencore 0.7.5 + MacOS Big Sur 11.6.1.
 
 All driver & kext are newest Debug version at 2021.11.21.
 
-Hardware:
+## Hardware:
 - MSI-b460m-Mortar
 - i5-10400
 - SSD: RC10 500GB
 - gxlinksta BCM94360CD with bluetooth
+
+## Feature:
+
++ [x] iGPU
++ [x] On-board audio
++ [x] Airdrop (no driver required)
++ [x] USB: all 3.0 is also 2.0 compatible. See noted below
++ [ ] Ethernet
++ [ ] Hibernate
+
 
 ## Steps
 
@@ -31,11 +41,14 @@ My case has 2 usb3.0 on the front, so there are 16 ports in total: 2(front) + 3(
 
 ### TODOs
 - Ethernet untested
-- Audio untested
+- Hibernate
 
 ## Ref:
+
 https://heipg.cn/tutorial/b460m-install-big-sur.html
+
 https://github.com/maemual/MSI-B460M-10700-5500XT
+
 https://dortania.github.io/OpenCore-Install-Guide/installer-guide
 
 USB Custimization: 
