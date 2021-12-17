@@ -19,7 +19,7 @@ All driver & kext are newest Debug version at 2021.12.17.
 + [x] USB: all 3.0 is also 2.0 compatible. See noted below
 + [x] 6600xt working
 + [x] Ethernet
-+ [ ] iGPU acceleration
++ [x] iGPU acceleration
 + [ ] Hibernate
 
 
@@ -44,7 +44,6 @@ My case has 2 usb3.0 on the front, so there are 16 ports in total: 2(front) + 3(
 
 ### TODOs
 - Hibernate
-- iGPU acceleration
 
 ## Ref:
 
