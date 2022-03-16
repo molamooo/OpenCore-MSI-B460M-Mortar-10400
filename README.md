@@ -1,8 +1,8 @@
 # Hackintosh for MSI-b460m-Mortar + i5-10400
 
-This is a working snapshot for opencore 0.7.6 + MacOS Monterey 12.1 (21C52)
+This is a working snapshot for opencore 0.7.9 + MacOS Monterey 12.1 (21C52)
 
-All driver & kext are newest Debug version at 2021.12.17.
+All driver & kext are newest Debug version at 2022.03.08.
 
 ## Hardware:
 - MSI-b460m-Mortar
@@ -37,6 +37,7 @@ Just like `OC` folder. Not included files shouldn't be necessary
 
 ### BIOS Configuration
 Google. Lots of related material. See the reference.
+To use dGPU as display and iGPU for acceleration, change IGD to PEG and enable integrated gpu.
 
 ### USB Customization
 Since Big Sur 1.4, the 15 usb port limitation can not be easily bypassed, so we need to carefully select which port we use.
