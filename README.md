@@ -1,8 +1,8 @@
 # Hackintosh for MSI-b460m-Mortar + i5-10400
 
-This is a working snapshot for opencore 0.7.9 + MacOS Monterey 12.1 (21C52)
+This is a working snapshot for opencore 0.8.0 + MacOS Monterey 12.4 (21F79)
 
-All driver & kext are newest Debug version at 2022.03.08.
+All driver & kext are newest Debug version at 2022.05.24.
 
 ## Hardware:
 - MSI-b460m-Mortar
@@ -42,6 +42,18 @@ To use dGPU as display and iGPU for acceleration, change IGD to PEG and enable i
 ### USB Customization
 Since Big Sur 1.4, the 15 usb port limitation can not be easily bypassed, so we need to carefully select which port we use.
 My case has 2 usb3.0 on the front, so there are 16 ports in total: 2(front) + 3(back) usb-A 3.0, 1(back) usb-C 3.0, 2(back) usb-A 2.0, plus 2 internal usb 2.0 (MYSTIC LIGHT + BCM94360CD's bluetooth). Each 3.0 interface needs to be 2.0 compatible, so it occupies 2 ports. That makes 16 ports in total. I removed one of the usb 2.0 port in my customized `USBMap.kext` (the top one, near PS2). As for the bluetooth, I connected it to the 2.0 pin close to back panel and preserved it in the kext.
+
+## DRM Support
+DRM support is required to get Apple TV & Apple Music loseless working.
+But it's broken since Big Sur according to WhatEverGreen's FAQ.
+There are discussions that AMD-dGPU-only systems can get DRM working correctly.
+This can be achieved by disabling iGPU in BIOS and config.plist, and change to a SMBIOS without iGPU (e.g. iMac Pro).
+I want to enable iGPU acceleration, so I found this command can get Apple TV & Apple Music working correctly while preserving iGPU:
+```
+defaults write com.apple.AppleGVA gvaForceAMDKE -boolean yes
+```
+This command, according to WhatEverGreen's document, forces streaming service to use AMD's hardward decoder.
+As for iGPU-only systems, I see no successful efforts.
 
 ### TODOs
 - Hibernate
