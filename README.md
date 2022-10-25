@@ -1,8 +1,8 @@
 # Hackintosh for MSI-b460m-Mortar + i5-10400
 
-This is a working snapshot for opencore 0.8.0 + MacOS Monterey 12.4 (21F79)
+This is a working snapshot for opencore 0.8.5 + MacOS Monterey 12.4 (21F79)
 
-All driver & kext are newest Debug version at 2022.05.24.
+All driver & kext are newest Debug version at 2022.10.25.
 
 ## Hardware:
 - MSI-b460m-Mortar
